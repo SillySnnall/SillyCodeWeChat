@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/news/main",
+    "pages/news_detail/main",
+    "pages/me/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1890ff",
+    "navigationBarTitleText": "SillyCode",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1890ff",
+    "list": [
+      {
+        "pagePath": "pages/news/main",
+        "text": "新闻",
+        "iconPath": "static/img/news.png",
+        "selectedIconPath": "static/img/news_selected.png"
+      },
+      {
+        "pagePath": "pages/me/main",
+        "text": "我的",
+        "iconPath": "static/img/me.png",
+        "selectedIconPath": "static/img/me_selected.png"
+      }
+    ]
+  }
+}
+
