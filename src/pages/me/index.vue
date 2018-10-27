@@ -7,6 +7,26 @@
         {{username}}
       </button>
     </div>
+
+    <!--<div class="server flex">-->
+      <!--<div class="server_item flex">-->
+        <!--<div class="server_item_text"><img src="../../../static/img/shou_can.svg" class="text_img">收藏</div>-->
+        <!--<img src="../../../static/img/right.svg" class="server_image">-->
+      <!--</div>-->
+      <!--<div class="server_item flex">-->
+        <!--<div class="server_item_text"><img src="../../../static/img/you_hui_juan.svg" class="text_img">优惠券</div>-->
+        <!--<img src="../../../static/img/right.svg" class="server_image">-->
+      <!--</div>-->
+      <!--<div class="server_item flex">-->
+        <!--<div class="server_item_text"><img src="../../../static/img/yao_qing.svg" class="text_img">邀请好友</div>-->
+        <!--<img src="../../../static/img/right.svg" class="server_image">-->
+      <!--</div>-->
+
+      <!--<div class="server_item flex">-->
+        <!--<div class="server_item_text"><img src="../../../static/img/help.svg" class="text_img">帮助与客服</div>-->
+        <!--<img src="../../../static/img/right.svg" class="server_image">-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -47,7 +67,7 @@
           success: set => {
             if (set.authSetting['scope.userInfo']) {
               // 已经授权
-              console.log("已售罄")
+              console.log("已授权")
               self.login()
             } else {
               // 未授权
@@ -75,7 +95,6 @@
       async login() {
         // 判断是否已经登录过了
         let user = wx.getStorageSync("userinfo");
-        console.log(user)
         if (user) {
           // 已经登陆过,后端数据库已有数据，直接向后端获取userinfo
           let login = await post("/login", {
@@ -136,6 +155,35 @@
         flex-direction: column;
         align-items: center;
         color: white;
+      }
+    }
+    .server {
+      flex-direction: column;
+      width: 100%;
+      margin-top: rpx(15);
+      .server_item {
+        flex-direction: row;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rpx(5);
+        padding-bottom: rpx(30);
+        padding-top: rpx(30);
+
+        .server_item_text {
+          margin-left: rpx(30);
+          font-size: rpx(35);
+          .text_img {
+            margin-right: rpx(15);
+            width: rpx(35);
+            height: rpx(35);
+          }
+        }
+        .server_image {
+          margin-right: rpx(30);
+          width: rpx(30);
+          height: rpx(30);
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 // 配置项
 
-const host = 'http://192.168.100.96'
-// const host = 'https://u2ms4vtq.qcloud.la'
+// const host = 'http://192.168.100.96'
+const host = 'https://www.h1024h.top'
 
 const config = {
   host

@@ -16,7 +16,7 @@
     data() {
       return {
         newsId: "",
-        article: ""
+        article: "  "
       };
     },
     // 组件
